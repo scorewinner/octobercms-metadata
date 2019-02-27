@@ -1,0 +1,12 @@
+{{ form_open() }}
+<div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ 'Language'|_ }}
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+        {% for code, name in locales %}
+            <button class="dropdown-item" type="button" data-request="onSwitchLocale" data-request-data="locale: '{{ code }}'" >{{ name }}</button>
+        {% endfor %}
+    </div>
+</div>
+{{ form_close() }} 
