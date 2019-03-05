@@ -1,0 +1,6 @@
+plugin:
+    name: 'liip.metadata::lang.plugin.name'
+    description: 'liip.metadata::lang.plugin.description'
+    author: Liip
+    icon: oc-icon-align-center
+    homepage: ''
