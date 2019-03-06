@@ -1,0 +1,12 @@
+title: 'liip.metadata::lang.plugin.listTitle'
+modelClass: Liip\Metadata\Models\Metadata
+list: $/liip/metadata/models/metadata/columns.yaml
+recordUrl: 'liip/metadata/metadatas/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

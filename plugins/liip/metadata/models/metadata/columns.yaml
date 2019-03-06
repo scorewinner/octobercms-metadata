@@ -1,0 +1,41 @@
+columns:
+    id:
+        label: 'liip.metadata::lang.data.id'
+        type: number
+        invisible: true
+        sortable: true
+    title:
+        label: 'liip.metadata::lang.data.title'
+        type: text
+        searchable: true
+        sortable: true
+    alt:
+        label: 'liip.metadata::lang.data.alt'
+        type: text
+        searchable: true
+        sortable: true
+    caption:
+        label: 'liip.metadata::lang.data.caption'
+        type: text
+        searchable: true
+        sortable: true
+    file:
+        label: 'liip.metadata::lang.data.file'
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'liip.metadata::lang.data.created'
+        type: datetime
+        invisible: true
+        sortable: true
+    updated_at:
+        label: 'liip.metadata::lang.data.updated'
+        type: datetime
+        invisible: true
+        sortable: true
+    deleted_at:
+        label: 'liip.metadata::lang.data.deleted'
+        type: datetime
+        invisible: true
+        sortable: true

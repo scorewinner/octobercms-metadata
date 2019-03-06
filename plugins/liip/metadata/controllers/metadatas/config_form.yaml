@@ -1,0 +1,10 @@
+name: Metadatas
+modelClass: Liip\Metadata\Models\Metadata
+form: $/liip/metadata/models/metadata/fields.yaml
+defaultRedirect: liip/metadata/metadatas
+create:
+    redirect: 'liip/metadata/metadatas/update/:id'
+    redirectClose: liip/metadata/metadatas
+update:
+    redirect: liip/metadata/metadatas
+    redirectClose: liip/metadata/metadatas

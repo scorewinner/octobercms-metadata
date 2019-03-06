@@ -4,3 +4,21 @@ plugin:
     author: Liip
     icon: oc-icon-align-center
     homepage: ''
+permissions:
+    liip.metadata.data:
+        tab: 'liip.metadata::lang.plugin.name'
+        label: 'liip.metadata::lang.permission.access'
+navigation:
+    main-menu-item:
+        label: 'liip.metadata::lang.plugin.name'
+        url: liip/metadata/metadatas
+        icon: icon-align-center
+        permissions:
+            - liip.metadata.data
+        sideMenu:
+            side-menu-item:
+                label: 'liip.metadata::lang.plugin.name'
+                url: liip/metadata/metadatas
+                icon: icon-align-justify
+                permissions:
+                    - liip.metadata.data

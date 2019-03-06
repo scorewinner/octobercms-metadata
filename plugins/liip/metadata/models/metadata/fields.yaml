@@ -1,0 +1,23 @@
+fields:
+    title:
+        label: 'liip.metadata::lang.data.title'
+        span: full
+        placeholder: ''
+        required: 1
+        type: text
+    alt:
+        label: 'liip.metadata::lang.data.alt'
+        span: full
+        placeholder: ''
+        required: 1
+        type: text
+    caption:
+        label: 'liip.metadata::lang.data.caption'
+        span: full
+        required: 0
+        type: text
+    file:
+        label: 'liip.metadata::lang.data.file'
+        mode: file
+        span: left
+        type: mediafinder

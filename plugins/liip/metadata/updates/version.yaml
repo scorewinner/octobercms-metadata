@@ -1,2 +1,5 @@
 1.0.1:
-    - Initialize plugin.
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table liip_metadata_metadatas'
+    - builder_table_create_liip_metadata_data.php
