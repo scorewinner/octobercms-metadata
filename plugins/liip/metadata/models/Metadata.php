@@ -12,6 +12,7 @@ class Metadata extends Model
     use \October\Rain\Database\Traits\SoftDelete;
 
     protected $dates = ['deleted_at'];
+    protected $fillable = ['file'];
 
 
     /**
