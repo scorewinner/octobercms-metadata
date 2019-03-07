@@ -8,3 +8,4 @@ create:
 update:
     redirect: liip/metadata/metadatas
     redirectClose: liip/metadata/metadatas
+preview: {  }

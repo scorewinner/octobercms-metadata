@@ -15,6 +15,7 @@ class BuilderTableCreateLiipMetadataData extends Migration
             $table->string('alt')->nullable();
             $table->string('caption')->nullable();
             $table->string('file')->nullable();
+            $table->boolean('deleted')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

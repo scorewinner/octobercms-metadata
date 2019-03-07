@@ -24,18 +24,19 @@ columns:
         type: text
         searchable: true
         sortable: true
-    created_at:
-        label: 'liip.metadata::lang.data.created'
-        type: datetime
-        invisible: true
-        sortable: true
-    updated_at:
-        label: 'liip.metadata::lang.data.updated'
-        type: datetime
-        invisible: true
-        sortable: true
-    deleted_at:
+    deleted:
         label: 'liip.metadata::lang.data.deleted'
+        type: switch
+        sortable: true
+    created_at:
+        label: 'liip.metadata::lang.data.created_at'
         type: datetime
         invisible: true
-        sortable: true
+    updated_at:
+        label: 'liip.metadata::lang.data.updated_at'
+        type: datetime
+        invisible: true
+    deleted_at:
+        label: 'liip.metadata::lang.data.deleted_at'
+        type: datetime
+        invisible: true
