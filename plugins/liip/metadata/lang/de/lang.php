@@ -16,6 +16,7 @@
         'created_at' => 'Erstellt am',
         'updated_at' => 'Geändert am',
         'deleted_at' => 'Gelöscht am',
+        'filter' => 'Nur gelöschte anzeigen',
     ],
     'permission' => [
         'access' => 'Metadaten Plugin verwenden',

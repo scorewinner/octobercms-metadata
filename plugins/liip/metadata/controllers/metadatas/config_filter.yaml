@@ -1,0 +1,7 @@
+scopes:
+    Deleted:
+        label: 'liip.metadata::lang.data.filter'
+        modelClass: liip\metadata\Models\metadata
+        type: checkbox
+        default: 0
+        conditions: deleted in (:filtered)
