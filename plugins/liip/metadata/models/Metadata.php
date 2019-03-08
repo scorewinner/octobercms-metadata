@@ -11,6 +11,9 @@ class Metadata extends Model
     
     use \October\Rain\Database\Traits\SoftDelete;
 
+    public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
+    public $translatable = ['title', 'alt', 'caption'];
+
     protected $dates = ['deleted_at'];
     protected $fillable = ['file'];
 
