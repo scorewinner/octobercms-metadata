@@ -18,6 +18,9 @@ class Plugin extends PluginBase
     public function boot()
     {
         Event::listen('media.file.upload', function($widget, $filePath) {
+            if (dirname($filePath) == "/") {
+                $filePath = '/' . basename($filePath);
+            }
             DB::table('liip_metadata_metadatas')->insert(['file' => $filePath]);
         });
         Event::listen('media.file.rename', function($widget, $originalPath, $newPath) {
