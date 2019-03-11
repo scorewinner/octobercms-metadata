@@ -21,5 +21,11 @@ class Plugin extends PluginBase
         Event::listen('media.file.upload', function($widget, $filePath) {
             DB::table('liip_metadata_metadatas')->insert(['file' => $filePath]);
         });
+        Event::listen('media.file.rename', function($widget, $originalPath, $newPath) {
+            if (dirname($newPath) == "/") {
+                $newPath = '/' . basename($newPath);
+            }
+            DB::table('liip_metadata_metadatas')->where('file', $originalPath)->update(['file' => $newPath]);
+        });
     }
 }
