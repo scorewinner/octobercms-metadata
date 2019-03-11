@@ -1,7 +1,6 @@
 <?php namespace Liip\Metadata;
 
 use Event;
-use Illuminate\Support\Facades\DB;
 use Liip\Metadata\Models\Metadata;
 use Log;
 use System\Classes\PluginBase;
