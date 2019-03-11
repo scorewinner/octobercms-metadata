@@ -1,5 +1,9 @@
 <?php namespace Liip\Metadata;
 
+use Event;
+use Illuminate\Support\Facades\DB;
+use Liip\Metadata\Models\Metadata;
+use Log;
 use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
@@ -10,5 +14,12 @@ class Plugin extends PluginBase
 
     public function registerSettings()
     {
+    }
+
+    public function boot()
+    {
+        Event::listen('media.file.upload', function($widget, $filePath) {
+            DB::table('liip_metadata_metadatas')->insert(['file' => $filePath]);
+        });
     }
 }
