@@ -27,5 +27,13 @@ class Plugin extends PluginBase
             }
             DB::table('liip_metadata_metadatas')->where('file', $originalPath)->update(['file' => $newPath]);
         });
+        Event::listen('media.file.move', function($widget, $path, $dest) {
+            if (basename($dest) != "") {
+                $newPath = $dest . '/' . basename($path);
+            } else {
+                $newPath = '/' . basename($path);
+            }
+            DB::table('liip_metadata_metadatas')->where('file', $path)->update(['file' => $newPath]);
+        });
     }
 }
