@@ -2,7 +2,6 @@
 
 use Event;
 use Illuminate\Support\Facades\DB;
-use Liip\Metadata\Models\Metadata;
 use Log;
 use System\Classes\PluginBase;
 
@@ -35,5 +34,9 @@ class Plugin extends PluginBase
             }
             DB::table('liip_metadata_metadatas')->where('file', $path)->update(['file' => $newPath]);
         });
+        Event::listen('media.file.delete', function($widget, $path) {
+            DB::table('liip_metadata_metadatas')->where('file', $path)->update(['deleted' => true]);
+        });
+
     }
 }
