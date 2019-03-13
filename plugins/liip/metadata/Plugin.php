@@ -19,30 +19,13 @@ class Plugin extends PluginBase
     {
         return [
             'filters' => [
-                'metadataTitle' => [$this, 'showMetadataTitle'],
-                'metadataAlt' => [$this, 'showMetadataAlt'],
-                'metadataCaption' => [$this, 'showMetadataCaption']
+                'metadata' => [$this, 'showMetadata']
             ],
         ];
     }
 
-    private function getMetadataOfFile($path)
-    {
-        return Metadata::where(['file' => '/' . $path])->first();
-    }
-    public function showMetadataTitle($path)
-    {
-        return $this->getMetadataOfFile($path)->title;
-    }
-
-    public function showMetadataAlt($path)
-    {
-        return $this->getMetadataOfFile($path)->alt;
-    }
-
-    public function showMetadataCaption($path)
-    {
-        return $this->getMetadataOfFile($path)->caption;
+    public function showMetadata($path){
+            return Metadata::where(['file' => '/' . $path])->first();
     }
 
     public function boot()
