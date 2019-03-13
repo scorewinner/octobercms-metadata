@@ -2,7 +2,6 @@
 
 use Event;
 use Liip\Metadata\Models\Metadata;
-use Log;
 use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
@@ -13,6 +12,37 @@ class Plugin extends PluginBase
 
     public function registerSettings()
     {
+    }
+
+    // Custom twig filters
+    public function registerMarkupTags()
+    {
+        return [
+            'filters' => [
+                'metadataTitle' => [$this, 'showMetadataTitle'],
+                'metadataAlt' => [$this, 'showMetadataAlt'],
+                'metadataCaption' => [$this, 'showMetadataCaption']
+            ],
+        ];
+    }
+
+    private function getMetadataOfFile($path)
+    {
+        return Metadata::where(['file' => '/' . $path])->first();
+    }
+    public function showMetadataTitle($path)
+    {
+        return $this->getMetadataOfFile($path)->title;
+    }
+
+    public function showMetadataAlt($path)
+    {
+        return $this->getMetadataOfFile($path)->alt;
+    }
+
+    public function showMetadataCaption($path)
+    {
+        return $this->getMetadataOfFile($path)->caption;
     }
 
     public function boot()
