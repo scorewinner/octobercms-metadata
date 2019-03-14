@@ -3,13 +3,11 @@ fields:
         label: 'liip.metadata::lang.data.title'
         span: full
         placeholder: ''
-        required: 1
         type: text
     alt:
         label: 'liip.metadata::lang.data.alt'
         span: full
         placeholder: ''
-        required: 1
         type: text
     caption:
         label: 'liip.metadata::lang.data.caption'
