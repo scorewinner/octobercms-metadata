@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'debug' => true,
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
     |
     */
 
-    'url' => 'metadata.test',
+    'url' => env('APP_URL', 'metadata.test'),
 
     /*
     |--------------------------------------------------------------------------
@@ -101,7 +101,7 @@ return [
     |
     */
 
-    'key' => 'JZB7c5KvqBm3UR0idgTa2lEyfTMDaB4V',
+    'key' => env('APP_KEY', ''),
 
     'cipher' => 'AES-256-CBC',
 
