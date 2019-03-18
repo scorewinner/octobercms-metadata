@@ -25,13 +25,16 @@ class Metadatas extends Controller
         parent::__construct();
         BackendMenu::setContext('Liip.Metadata', 'main-menu-item', 'side-menu-item');
     }
-
+    /**
+     * Ajax Function for list refresh button
+    **/
     public function onRefresh(){
         $directrories = MediaLibrary::instance()->listAllDirectories();
         $metadatas = Metadata::all();
         $paths = [];
         foreach ($directrories as $directory) {
-            $mediaList = MediaLibrary::instance()->listFolderContents($folder = $directory, $sortBy = 'title', $filter = null, $ignoreFolders = true);
+            $mediaList = MediaLibrary::instance()->
+            listFolderContents($folder = $directory, $sortBy = 'title', $filter = null, $ignoreFolders = true);
             foreach ($mediaList as $media){
                 Metadata::firstOrCreate(['file' => $media->path]);
                 Metadata::where(['file' => $media->path])->update(['deleted' => false]);

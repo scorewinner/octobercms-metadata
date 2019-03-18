@@ -24,10 +24,12 @@ class Plugin extends PluginBase
         ];
     }
 
+    // Function for twig Filter
     public function showMetadata($path){
             return Metadata::where(['file' => '/' . $path])->first();
     }
 
+    // Event listeners to listen to events from Media Manager
     public function boot()
     {
         Event::listen('media.file.upload', function($widget, $filePath) {

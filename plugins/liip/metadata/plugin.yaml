@@ -1,3 +1,4 @@
+# Generated from config in Builder
 plugin:
     name: 'liip.metadata::lang.plugin.name'
     description: 'liip.metadata::lang.plugin.description'

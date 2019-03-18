@@ -1,5 +1,7 @@
 <?php namespace Liip\Metadata\Updates;
 
+//Generated from config in Builder
+
 use Schema;
 use October\Rain\Database\Updates\Migration;
 

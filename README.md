@@ -8,11 +8,11 @@ Instructions on how to install a clean October instance can be found at the [ins
 
 Metadata is a octobercms project that depends on
 
-- php 7.2 or higher
-- mysql 5.6 or higher
+- php 7.2
+- mysql 5.6
+- Composer
 - a webserver (apache, nginx)
   - I am using [Laravel Valet](https://laravel.com/docs/5.7/valet) on my system
-- Composer 1.8.0
 
 
 ### First, clone this Git repository
