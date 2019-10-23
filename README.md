@@ -18,7 +18,7 @@ Metadata is a octobercms project that depends on
 ### First, clone this Git repository
 
 ```
-git clone git@gitlab.liip.ch:tim.keller/metadata.git
+git clone git@github.com:scorewinner/octobercms-metadata.git
 ```
 
 ### change into the project root
